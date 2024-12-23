@@ -147,6 +147,22 @@ trait WithForm
         ], $options));
     }
 
+    /**
+     * Render a multiple select field.
+     * 
+     * @param string $name
+     * @param array $options
+     * @param array $settings
+     * @return array
+     */
+    protected function multipleSelect($name, $options, $settings = [])
+    {
+        return $this->field($name, 'multipleSelect', array_merge([
+            'options' => $options,
+            'placeholder' => 'Select ' . strtolower(str_replace('_', ' ', $name)),
+        ], $settings));
+    }
+
     protected function checkbox($name, $options = [])
     {
         return $this->field($name, 'checkbox', array_merge([

@@ -10,7 +10,7 @@
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <i class="fas fa-search text-gray-400"></i>
                         </div>
-                        <input wire:model.debounce.300ms="search" id="search" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-[#4d5bf9] focus:border-[#4d5bf9] sm:text-sm" placeholder="Search" type="search">
+                        <input wire:model.debounce.300ms="applySearchFilter" id="search" name="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-[#4d5bf9] focus:border-[#4d5bf9] sm:text-sm" placeholder="Search" type="search">
                     </div>
                 </div>
                 <!-- Filters -->

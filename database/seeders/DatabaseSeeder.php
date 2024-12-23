@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -23,6 +21,11 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
 
-        Product::factory(40)->create();
+        $this->call([
+            CategorySeeder::class,
+            AttributeSeeder::class,
+            ProductSeeder::class,
+        ]);
+
     }
 }

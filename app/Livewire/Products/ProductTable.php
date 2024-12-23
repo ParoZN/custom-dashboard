@@ -15,12 +15,13 @@ class ProductTable extends Component
 
     protected function baseQuery()
     {
-        return Product::query();  // Your model
+        return Product::query()
+            ->with(['categories', 'attributes']);  // Eager load relationships
     }
 
     protected function searchableFields()
     {
-        return ['name', 'sku', 'description'];  // Your searchable fields
+        return ['name', 'sku', 'description'];
     }
 
     public function render()
@@ -37,11 +38,21 @@ class ProductTable extends Component
                 [
                     'field' => 'price',
                     'label' => 'Price',
-                    'component' => 'table.columns.price'  // Custom renderer if needed
+                    'component' => 'table.columns.price'
                 ],
                 [
                     'field' => 'stock',
                     'label' => 'Stock Level'
+                ],
+                [
+                    'field' => 'categories',
+                    'label' => 'Categories',
+                    'component' => 'table.columns.categories'
+                ],
+                [
+                    'field' => 'attributes',
+                    'label' => 'Attributes',
+                    'component' => 'table.columns.attributes'
                 ],
             ],
             'filters' => [

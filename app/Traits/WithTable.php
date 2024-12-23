@@ -36,7 +36,7 @@ trait WithTable
         $this->resetPage();
     }
 
-    protected function applySearchFilter($query)
+    public function applySearchFilter($query)
     {
         if ($this->search && method_exists($this, 'searchableFields')) {
             $fields = $this->searchableFields();

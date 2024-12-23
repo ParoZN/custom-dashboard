@@ -59,16 +59,16 @@
         </div>
 
         <!-- Additional Charts -->
-        <div class="bg-white p-6 rounded-lg shadow">
+        <div class="col-span-1 lg:col-span-2 bg-white p-6 rounded-lg shadow">
             <h2 class="text-lg font-semibold text-gray-700">Top Products</h2>
             <div class="mt-4">
-                <img src="https://placehold.co/600x150" alt="Products">
+                <livewire:widgets.product-chart />
             </div>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
-            <h2 class="text-lg font-semibold text-gray-700">Sales Mapping by Country</h2>
+            <h2 class="text-lg font-semibold text-gray-700">Product Stock</h2>
             <div class="mt-4">
-                <img src="https://placehold.co/600x150" alt="Sales Mapping">
+                <livewire:widgets.product-stock-chart />
             </div>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
